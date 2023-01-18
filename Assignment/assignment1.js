@@ -23,7 +23,7 @@ let student = [{ name: "Daniel", email: "daniel@gmail.com", marks: [80, 60, 50, 
 ];
 
 
-console.log(studentWithHighestMarks(student));
+console.log(studentWithHighestMarks(student));  //Geri
 
 
 
@@ -36,7 +36,7 @@ let minimumValue = array.reduce(function (acc, cV) {
 }, Infinity);
 
 
-console.log(minimumValue);
+console.log(minimumValue);   //-11
 
 
 
@@ -48,4 +48,4 @@ function lengthOfString(string) {
 }
 
 let strName = "helloworld";
-console.log(lengthOfString(strName));
+console.log(lengthOfString(strName)); //10
