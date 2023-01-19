@@ -1,5 +1,4 @@
 // Question 1  
-
 function studentWithHighestMarks(array) {
     let highestMarks = 0;
     let highestStudent = "";
@@ -23,7 +22,7 @@ let student = [{ name: "Daniel", email: "daniel@gmail.com", marks: [80, 60, 50, 
 ];
 
 
-console.log(studentWithHighestMarks(student));  //Geri
+console.log(studentWithHighestMarks(student));  // Geri
 
 
 
@@ -36,7 +35,7 @@ let minimumValue = array.reduce(function (acc, cV) {
 }, Infinity);
 
 
-console.log(minimumValue);   //-11
+console.log(minimumValue);   // -11
 
 
 
@@ -48,4 +47,11 @@ function lengthOfString(string) {
 }
 
 let strName = "helloworld";
-console.log(lengthOfString(strName)); //10
+console.log(lengthOfString(strName)); // 10
+
+
+
+
+
+
+
