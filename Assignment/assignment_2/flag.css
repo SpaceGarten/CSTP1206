@@ -1,0 +1,39 @@
+/* container grid layout */
+.container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap:30px;
+}
+
+/* flag image layout */
+.flag {
+    height: 150px;
+    width: 250px;
+    border-radius: 2%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: 2px solid black; 
+}
+
+/* Title text layout */
+#countryTitle, #populationTitle{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* flag hover layout */
+.flag:hover{
+    transform: scale(1.1);
+}
+
+/* country form container layout */
+form{
+    border: 2px solid black;
+    border-radius: 2%;
+    padding: 10px;   
+}
+
+
+
