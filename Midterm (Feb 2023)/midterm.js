@@ -1,8 +1,9 @@
 const apiKey = '48bae2a18923cc05022401669bcbad36';
-const apiUrl = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`;
+const trendingApiUrl = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`;
 
-// get a reference to the search bar and the movie container
-const searchBar = document.getElementById('search-bar');
+// get a reference to the search form, search input, and movie container
+const searchForm = document.getElementById('search-form');
+const searchInput = document.getElementById('search-input');
 const movieContainer = document.getElementById('movie-container');
 
 // create a template for the movie tile
@@ -30,11 +31,7 @@ const fetchGenres = () => {
 };
 
 // fetch data from the API and update the HTML with the movie data
-const fetchMovies = (searchQuery = '') => {
-  const url = searchQuery ?
-    `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchQuery}` :
-    apiUrl;
-
+const fetchMovies = (url) => {
   fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -74,14 +71,16 @@ const fetchMovies = (searchQuery = '') => {
     });
 };
 
-// fetch the initial list of movies
-fetchMovies();
+// fetch the initial list of movies (trending movies of the week)
+fetchMovies(trendingApiUrl);
 
-// listen for search queries
-searchBar.addEventListener('keyup', event => {
-  const searchQuery = event.target.value.trim();
+// listen for search form submissions
+searchForm.addEventListener('submit', event => {
+  event.preventDefault();
+  const searchQuery = searchInput.value.trim();
 
   if (searchQuery.length >= 3) {
-    fetchMovies(searchQuery);
+    const searchApiUrl = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchQuery}`;
+    fetchMovies(searchApiUrl);
   }
 });
