@@ -1,6 +1,5 @@
 # CSTP1206
 
 
-Assignment contains JS assignment from Jan 18th, 2023
-
+First commits on this profile is the image gallary app for the first assignment submission
 
